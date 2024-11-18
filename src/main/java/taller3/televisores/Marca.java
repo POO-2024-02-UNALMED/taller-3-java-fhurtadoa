@@ -1,22 +1,13 @@
 package taller3.televisores;
 
+public final class Marca { // Clase inmutable
+    private final String nombre; // Atributo final
 
-public class Marca {
-    private String nombre;
-
-
-    public Marca(String nombre){
+    public Marca(String nombre) {
         this.nombre = nombre;
     }
-    
 
-    public String getNombre(){
+    public String getNombre() {
         return this.nombre;
     }
-
-
-    public void setNombre(String nombre){
-        this.nombre = nombre;
-    }
-    
 }

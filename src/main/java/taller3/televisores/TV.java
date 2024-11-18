@@ -1,7 +1,6 @@
 package taller3.televisores;
 
-
-public class TV {
+class TV { // Cambiado a default 
     private Marca marca;
     private int canal = 1;
     private int precio = 500;
@@ -10,118 +9,93 @@ public class TV {
     private Control control;
     private static int numTV;
 
-    
-    public TV(Marca marca, boolean estado){
+    TV(Marca marca, boolean estado) { // Cambiado a default 
         this.marca = marca;
         this.estado = estado;
-        numTV++;
+        incrementarNumTV();
     }
 
-
-    public Marca getMarca(){
+    public Marca getMarca() {
         return this.marca;
     }
-
-
-    public void setMarca(Marca marca){
-        this.marca = marca;
-    }
-
 
     public int getCanal() {
         return this.canal;
     }
 
-
-    public void setCanal(int canal) {
-        if (this.estado && canal >= 1 && canal <= 120) {
-            this.canal = canal;
-        }
-    }
-
-
     public int getPrecio() {
         return this.precio;
     }
-
-
-    public void setPrecio(int precio) {
-        this.precio = precio;
-    }
-
 
     public int getVolumen() {
         return this.volumen;
     }
 
-
-    public void setVolumen(int volumen) {
-        if (this.estado && volumen >= 0 && volumen <= 7) {
-            this.volumen = volumen;
-        }
-    }
-
-
     public Control getControl() {
         return this.control;
     }
-
-
-    public void setControl(Control control) {
-        this.control = control;
-    }
-
-
-    public static int getNumTV() {
-        return numTV;
-    }
-
-
-    public static void setNumTV(int num) {
-        numTV = num;
-    }
-
-
-    public void turnOn() {
-        this.estado = true;
-    }
-
-
-    public void turnOff() {
-        this.estado = false;
-    }
-
 
     public boolean getEstado() {
         return this.estado;
     }
 
+    void setPrecio(int precio) { // Cambiado a default 
+        this.precio = precio;
+    }
 
-    public void canalUp() {
+    void setControl(Control control) { // Cambiado a default 
+        this.control = control;
+    }
+
+    static int getNumTV() {
+        return numTV;
+    }
+
+    private static void incrementarNumTV() { // Método privado para modificar el contador
+        numTV++;
+    }
+
+    void turnOn() { // Cambiado a default 
+        this.estado = true;
+    }
+
+    void turnOff() { // Cambiado a default 
+        this.estado = false;
+    }
+
+    void setCanal(int canal) { // Cambiado a default 
+        if (this.estado && canal >= 1 && canal <= 120) {
+            this.canal = canal;
+        }
+    }
+
+    void setVolumen(int volumen) { // Cambiado a default 
+        if (this.estado && volumen >= 0 && volumen <= 7) {
+            this.volumen = volumen;
+        }
+    }
+
+    void canalUp() { // Cambiado a default 
         if (this.estado && this.canal < 120) {
             this.canal++;
         }
     }
 
-
-    public void canalDown() {
+    void canalDown() { // Cambiado a default 
         if (this.estado && this.canal > 1) {
             this.canal--;
         }
     }
 
-
-    public void volumenUp() {
+    void volumenUp() { // Cambiado a default 
         if (this.estado && this.volumen < 7) {
             this.volumen++;
         }
     }
 
-
-    public void volumenDown() {
+    void volumenDown() { // Cambiado a default 
         if (this.estado && this.volumen > 0) {
             this.volumen--;
         }
     }
-
 }

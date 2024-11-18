@@ -1,75 +1,64 @@
 package taller3.televisores;
 
-public class Control {
+class Control { // Cambiado a default (package-private)
     private TV tv;
 
-
-    public void enlazar(TV tv) {
+    void enlazar(TV tv) { // Cambiado a default (package-private)
         this.tv = tv;
         tv.setControl(this);
     }
 
-
-    public TV getTv() {
+    TV getTv() { // Cambiado a default (package-private)
         return this.tv;
     }
 
-
-    public void setTv(TV tv) {
+    void setTv(TV tv) { // Cambiado a default (package-private)
         this.tv = tv;
     }
 
-
-    public void turnOn() {
+    void turnOn() { // Cambiado a default (package-private)
         if (this.tv != null) {
             this.tv.turnOn();
         }
     }
 
-
-    public void turnOff() {
+    void turnOff() { // Cambiado a default (package-private)
         if (this.tv != null) {
             this.tv.turnOff();
         }
     }
 
-
-    public void canalUp() {
+    void canalUp() { // Cambiado a default (package-private)
         if (this.tv != null) {
             this.tv.canalUp();
         }
     }
 
-
-    public void canalDown() {
+    void canalDown() { // Cambiado a default (package-private)
         if (this.tv != null) {
             this.tv.canalDown();
         }
     }
 
-
-    public void volumenUp() {
+    void volumenUp() { // Cambiado a default (package-private)
         if (this.tv != null) {
             this.tv.volumenUp();
         }
     }
 
-
-    public void volumenDown() {
+    void volumenDown() { // Cambiado a default (package-private)
         if (this.tv != null) {
             this.tv.volumenDown();
         }
     }
 
-
-    public void setCanal(int canal) {
+    void setCanal(int canal) { // Cambiado a default (package-private)
         if (this.tv != null) {
             this.tv.setCanal(canal);
         }
     }
 
-    
-    public void setVolumen(int volumen) {
+    void setVolumen(int volumen) { // Cambiado a default (package-private)
         if (this.tv != null) {
             this.tv.setVolumen(volumen);
         }
